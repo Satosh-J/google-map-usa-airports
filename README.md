@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# USA airports
+This project is a simple web app to display plot and distance between any 2 USA airports.
+Tech stack: React, TypeScript, Mui, GoogleMap...
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
