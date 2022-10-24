@@ -35,22 +35,26 @@ export const AirportMap: FC<IAirportMap> = ({ center, departing, destination }) 
         }}
         label='departing'
       />
-      <Marker
-        position={{
-          lat: departing.latitude,
-          lng: departing.longitude
-        }}
-        label='destination'
-      />
-      <Polyline
-        path={[{
-          lat: departing.latitude,
-          lng: departing.longitude
-        }, {
-          lat: departing.latitude,
-          lng: departing.longitude
-        }]}
-      />
+      {
+        destination.name !== departing.name && <>
+          <Marker
+            position={{
+              lat: destination.latitude,
+              lng: destination.longitude
+            }}
+            label='destination'
+          />
+          <Polyline
+            path={[{
+              lat: departing.latitude,
+              lng: departing.longitude
+            }, {
+              lat: destination.latitude,
+              lng: destination.longitude
+            }]}
+          />
+        </>
+      }
     </GoogleMap>
   )
 }
