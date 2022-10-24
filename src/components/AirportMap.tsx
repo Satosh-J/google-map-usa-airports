@@ -15,7 +15,7 @@ interface IAirportMap {
 export const AirportMap: FC<IAirportMap> = ({ center, departing, destination }) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_APIKEY!
+    googleMapsApiKey: 'AIzaSyAoKogalAIj85BSFAfikRwwLqLWhi_JXzU'
   });
 
   if (!isLoaded) return <div>Map Loading ...</div>
@@ -26,7 +26,7 @@ export const AirportMap: FC<IAirportMap> = ({ center, departing, destination }) 
       mapContainerStyle={containerStyle}
       center={center}
       zoom={4}
-      
+
     >
       <Marker
         position={{
