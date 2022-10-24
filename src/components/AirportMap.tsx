@@ -13,12 +13,13 @@ interface IAirportMap {
 }
 
 export const AirportMap: FC<IAirportMap> = ({ center, departing, destination }) => {
-  const { isLoaded } = useJsApiLoader({
+  const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyAoKogalAIj85BSFAfikRwwLqLWhi_JXzU'
+    googleMapsApiKey: `${process.env.REACT_APP_GOOGLE_MAP_APIKEY}`
   });
 
   if (!isLoaded) return <div>Map Loading ...</div>
+  if (loadError) return <div>{loadError.message}</div>
 
   return (
     <GoogleMap
@@ -26,7 +27,6 @@ export const AirportMap: FC<IAirportMap> = ({ center, departing, destination }) 
       mapContainerStyle={containerStyle}
       center={center}
       zoom={4}
-
     >
       <Marker
         position={{
@@ -36,7 +36,8 @@ export const AirportMap: FC<IAirportMap> = ({ center, departing, destination }) 
         label='departing'
       />
       {
-        destination.name !== departing.name && <>
+        destination.name !== '' && departing.name !== '' &&
+        <>
           <Marker
             position={{
               lat: destination.latitude,
@@ -55,7 +56,7 @@ export const AirportMap: FC<IAirportMap> = ({ center, departing, destination }) 
           />
         </>
       }
-    </GoogleMap>
+    </GoogleMap >
   )
 }
 

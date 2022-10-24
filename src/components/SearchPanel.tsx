@@ -40,7 +40,7 @@ export const SearchPanel: FC<ISearchPanel> = (
         />
       </Grid>
       <Grid item xs={12}>
-        <Typography textAlign={'center'}>
+        <Typography textAlign={'center'} fontWeight='bold'>
           {result} nautical miles
         </Typography>
       </Grid>

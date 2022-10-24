@@ -56,6 +56,8 @@ export const Home: FC = () => {
   }
   const updateAirportDestination = (text: string) => {
 
+    console.log({ text })
+
     const index = airportsList.indexOf(text);
 
     if (index > -1) {
