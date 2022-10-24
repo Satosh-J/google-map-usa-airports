@@ -18,7 +18,7 @@ const center = {
   lng: -97
 };
 
-const airportsList = airports.map(airport => airport.iata !== '' ? `(${airport.iata}) ${airport.name}` : airport.name)
+const airportsList = airports.map(airport => airport.iata !== '' && airport.city !== '' ? `(${airport.iata} - ${airport.city}) ${airport.name}` : airport.name)
 
 export const Home: FC = () => {
 
@@ -55,8 +55,6 @@ export const Home: FC = () => {
     }
   }
   const updateAirportDestination = (text: string) => {
-
-    console.log({ text })
 
     const index = airportsList.indexOf(text);
 
