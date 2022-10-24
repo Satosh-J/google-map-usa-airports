@@ -98,11 +98,11 @@ export const Home: FC = () => {
           />
         </CardContent>
         <CardMedia sx={{ height: 500 }}>
-          <AirportMap
+          {/* <AirportMap
             center={center}
             departing={airportDeparting}
             destination={airportDestination}
-          />
+          /> */}
         </CardMedia>
       </Card>
     </Box>
