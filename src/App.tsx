@@ -1,9 +1,10 @@
-import './App.css';
 import Home from './pages/Home';
-
+import { Container } from '@mui/material'
 function App() {
   return (
-    <Home />
+    <Container sx={{ height: '100vh' }}>
+      <Home />
+    </Container>
   );
 }
 
