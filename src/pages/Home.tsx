@@ -97,7 +97,9 @@ export const Home: FC = () => {
             updateAirportDestination={updateAirportDestination}
           />
         </CardContent>
-        <CardMedia sx={{ height: 500 }}>
+        <CardMedia sx={{ height: 500 }}
+        >
+          <p>Hi</p>
           {/* <AirportMap
             center={center}
             departing={airportDeparting}
