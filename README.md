@@ -2,6 +2,8 @@
 This project is a simple web app to display plot and distance between any 2 USA airports.
 Tech stack: React, TypeScript, Mui, GoogleMap...
 
+![gmap-airport (2)](https://github.com/Satosh-J/google-map-usa-airports/assets/95545435/7ef91849-10e6-4fec-b594-76b3b70342a9)
+![gmap-airport (1)](https://github.com/Satosh-J/google-map-usa-airports/assets/95545435/8fad8e38-0eb1-467a-8e1a-46c0c9e4f3e1)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
